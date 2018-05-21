@@ -46,14 +46,14 @@ func main() {
 	fmt.Println(string(mapB)) // -> {"key1":"value1","key2":"value2"}
 
 	// Encoding custom datatype
-	// Only expored fields are marshalled
+	// Only exported fields are marshalled
 	// Field names used as key
 	res1D := &response1{1, []string{"apple", "peach", "orange"}}
 	res1B, _ := json.Marshal(res1D)
 	fmt.Println(string(res1B)) // -> {"Page":1,"Fruits":["apple","peach","orange"]}
 
 	// Encoding custom datatype
-	// Only expored fields are marshalled
+	// Only exported fields are marshalled
 	// customize key names near struct fields using -> {field} {field_type} `json:{key_name}`
 	res2D := &response2{1, []string{"apple", "peach", "orange"}}
 	res2B, _ := json.Marshal(res2D)
